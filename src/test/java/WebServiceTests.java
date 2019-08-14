@@ -4,9 +4,12 @@ import classes.Exception.Classes.UserNotRegisteredException;
 import classes.Exception.Classes.WrongArticleException;
 import classes.User;
 import classes.WebServiceTestClass;
+
 import interfaces.WebService;
+
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.ArgumentMatcher;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
@@ -40,6 +43,7 @@ public class WebServiceTests {
 
     @Test
     public void testUserWantsRefund() {
+
         when(webService.isUserRegistered(anyString())).thenReturn(true);
         when(webService.isUserLoggedIn(anyString())).thenReturn(true);
         when(webService.isValidId(anyInt())).thenReturn(true);
@@ -65,7 +69,6 @@ public class WebServiceTests {
         assertThrows(UserNotLoggedInException.class, () -> {
            when(webService.isUserRegistered(anyString())).thenReturn(true);
            when(webService.isUserLoggedIn(anyString())).thenReturn(false);
-
             user.refund(webService, 001, "testUser");
         });
     }
@@ -124,5 +127,26 @@ public class WebServiceTests {
         assertEquals(3, spyWebService.id + 2);
         //assertEquals(1, mockWebService.addOne());
         assertEquals(2, spyWebService.addOne());
+    }
+
+    @Test
+    public void testArgThat(){
+        when(webService.getArticle(anyString())).thenReturn("test");
+        webService.getArticle("eingabe");
+
+        /*verify(webService).getArticle(argThat(new ArgumentMatcher<String>() {
+            @Override
+            public boolean matches(String s) {
+                if (s.equals("eingabe")) {
+                    return true;
+                }
+                return false;
+            }
+        }));*/
+
+        verify(webService).getArticle(argThat(String -> String.equals("eingabe") == true));
+
+
+
     }
 }

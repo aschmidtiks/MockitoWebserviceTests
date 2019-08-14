@@ -1,9 +1,21 @@
 
 7
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
-M
-src/main/java/WebService.java,a\c\acb09189bd22b50a4ca092059703c1c07fefe606
 R
 "src/test/java/WebServiceTests.java,6\7\67bbc00523c951bcc39f9412ee9134be28b40732
-G
-src/main/java/User.java,c\c\cc4d6aa268d93c9fcea3805c8ed34ed49cede1a9
+s
+Csrc/main/java/classes/Exception/Classes/NotAValidUserException.java,c\6\c63247716533b21db0c44f6502287fee161b8941
+u
+Esrc/main/java/classes/Exception/Classes/UserNotLoggedInException.java,3\3\33f82145fab36a6b7b2ba4e73b2058e076b22548
+w
+Gsrc/main/java/classes/Exception/Classes/UserNotRegisteredException.java,0\b\0b0ad442785f97de4c54889199ddf40bfe63e892
+r
+Bsrc/main/java/classes/Exception/Classes/WrongArticleException.java,b\1\b1bafcbb3151afb8127a321b6ca612ed75e2ff32
+X
+(src/main/java/interfaces/WebService.java,e\1\e13e3aa850606313f4e5de6c8c5ab5e622099596
+^
+.src/main/java/classes/WebServiceTestClass.java,e\3\e3a93677b37b5ccddcb0bb93989c75cb230d5156
+O
+src/main/java/classes/User.java,4\7\47a19a2d50dd20fa5f956545a25e680040fc13d4
+q
+Asrc/main/java/classes/Exception/Classes/NotAValidIDException.java,3\a\3aa2a1fc2735d20762362d6eb8c68b863d1ae611
